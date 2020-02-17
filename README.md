@@ -2,13 +2,13 @@
 
 This is the code for the paper "Game-based Neural Architecture Search"
 
-#Requirements
+# Requirements
 
 Python >= 3.7.3
 
 Tensorflow >= 1.14.0
 
-#To search Architecture
+# To search Architecture
 
 To search CNN architectures for CIFAR-10, run
 ```
@@ -32,7 +32,7 @@ bash scripts/train_final_imagenet.sh
 ```
 
 
-## Acknowledgements
+# Acknowledgements
 We thank Hieu Pham for the discussion on some details of the weight-sharing model in [`ENAS`](https://github.com/melodyguan/enas) implementation. 
 We furthermore thank the anonymous reviewers for their constructive comments.
 
