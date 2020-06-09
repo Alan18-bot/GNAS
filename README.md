@@ -23,7 +23,8 @@ To train a fixed CNN architecture on CIFAR-10 from scratch, run
 cd GNAS
 bash scripts/train_final.sh
 ```
-We show several well-performing architectures found by our algorithm in ```train_final.sh```. All of them can obtain competitive test accuracies. Their training logs are also provided.
+The best found cells are shown in "best_cells.pdf".
+Moreover, we show several well-performing architectures found by our algorithm in ```train_final.sh```. All of them can obtain competitive test accuracies. Their training logs are also provided.
 
 To train a fixed CNN architecture on ImageNet from scratch, run
 ```
