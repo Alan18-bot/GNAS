@@ -253,8 +253,8 @@ class Model(object):
 
 
         self.use_aux_heads = args.use_aux_heads
-        self.num_epochs = args.num_epochs
-        self.num_train_steps = self.num_epochs * self.num_train_batches
+        self.num_iterations = args.num_iterations
+        self.num_train_steps = self.num_iterations * self.num_train_batches
         self.drop_path_keep_prob = args.drop_path_keep_prob
         self.lr_cosine = args.lr_cosine
         self.lr_max = args.lr_max
@@ -271,7 +271,7 @@ class Model(object):
 
 
         if self.drop_path_keep_prob is not None:
-            assert self.num_epochs is not None, "Need num_epochs to drop_path"
+            assert self.num_iterations is not None, "Need num_epochs to drop_path"
 
         pool_distance = self.num_layers // 3
         self.pool_layers = [pool_distance, 2 * pool_distance + 1]

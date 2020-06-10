@@ -1,15 +1,17 @@
 #!/usr/bin/env bash
-export CUDA_VISIBLE_DEVICES=1
+export CUDA_VISIBLE_DEVICES=0
 nvidia-smi
 export PYTHONPATH=./:$PYTHONPATH
 
 DATA_DIR=data/cifar10
 TRAIN_DIR = Train_outputs/
 MODEL_DIR = Out_models/
+RS_PLUS_TRAIN_DIR = RS_plus_Train_outputs/
+RS_PLUS_MODEL_DIR = RS_plus_Out_models/
 
 
 
-python src/train_search.py \
+python src/train_search_GNAS_and_RS_plus.py \
   --data="$DATA_DIR" \
   --batch_size=144 \
   --train_valid_batch_size=100 \
@@ -24,6 +26,8 @@ python src/train_search.py \
   --grad_bound = 5.0 \
   --train_output_dir = "$TRAIN_DIR" \
   --model_dir = "$MODEL_DIR" \
+  --rs_train_output_dir = "$RS_PLUS_TRAIN_DIR" \
+  --rs_model_dir = "$RS_PLUS_MODEL_DIR" \
   --keep_prob = 0.9 \
   --drop_path_keep_prob = 0.6 \
   --lr_dec_every = 100 \

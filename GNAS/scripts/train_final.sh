@@ -9,20 +9,32 @@ mkdir -p $MODEL_DIR
 
 
 
-#arc_1 best test acc: 97.40
+#GNAS_arc_1 best test acc: 97.40
 fixed_arc="1 3 1 4 0 4 0 4 0 4 1 1 0 2 3 1 1 4 0 3 1 1 1 1 0 0 0 4 2 1 1 2"
 
-#arc_2 best test acc: 97.36
+#GNAS_arc_2 best test acc: 97.36
 fixed_arc="1 4 1 0 0 2 0 0 0 1 2 2 2 2 2 0 0 3 1 1 0 1 1 3 3 2 0 0 1 2 4 2"
 
-#arc_3 best test acc: 97.36
+#GNAS_arc_3 best test acc: 97.36
 fixed_arc="1 3 1 1 0 3 0 1 0 4 3 3 0 4 0 0 0 4 0 1 0 4 1 4 3 1 1 2 1 3 4 2"
 
-#arc_4 best test acc: 97.26
-fixed_arc="1 4 1 3 0 0 0 4 0 0 0 2 2 4 4 4 1 0 0 3 1 2 0 2 2 4 0 1 1 4 2 1"
 
-#arc_5 best test acc 97.35
+#GNAS_arc_4 best test acc 97.35
 fixed_arc="0 4 0 3 1 0 1 0 0 4 2 4 2 0 2 1 0 4 0 1 2 4 1 0 0 3 1 3 0 0 3 2"
+
+#RS_plus_arc_1 best test acc 97.33
+fixed_arc="1 0 1 3 0 3 2 1 0 0 0 1 0 4 2 2 0 1 1 3 0 3 0 0 1 2 1 0 3 2 2 2"
+
+#RS_plus_arc_2 best test acc 97.27
+fixed_arc="1 1 1 3 0 4 0 3 0 1 0 0 0 4 4 1 0 2 1 3 0 3 0 2 2 3 2 1 4 0 3 4"
+
+#RS_plus_arc_3 best test acc 97.22
+fixed_arc="1 0 1 3 0 0 0 2 0 4 0 3 0 1 4 1 0 3 1 4 1 3 2 0 3 4 1 4 4 1 1 3"
+
+#RS_plus_arc_4 best test acc 97.22
+fixed_arc="0 2 0 1 1 1 1 3 0 4 1 3 0 3 3 1 1 2 0 3 0 1 0 2 3 1 0 2 3 1 3 2"
+
+
 
 
 

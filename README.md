@@ -10,11 +10,23 @@ Tensorflow >= 1.14.0
 
 # To search Architecture
 
-To search CNN architectures for CIFAR-10, run
+To search CNN architectures for CIFAR-10 by GNAS, run
 ```
 cd GNAS
-bash scripts/train_search.sh
+bash scripts/train_search_GNAS.sh
 ```
+To use random search and the improved random search, respectively, run
+```
+cd GNAS
+bash scripts/train_search_RS.sh
+```
+and
+```
+cd GNAS
+bash scripts/train_search_GNAS_and_RS_plus.sh
+```
+
+
 
 After searching, the architectures returned by GNAS will be in ```Out_models/```, along with their validation accuracies. Your can choose several architectures with relatively high validation accuracies and train them further.
 
@@ -24,7 +36,7 @@ cd GNAS
 bash scripts/train_final.sh
 ```
 The best found cells are shown in "best_cells.pdf".
-Moreover, we show several well-performing architectures found by our algorithm in ```train_final.sh```. All of them can obtain competitive test accuracies. Their training logs are also provided.
+Moreover, we show several well-performing architectures found by our algorithms in ```train_final.sh```. All of them can obtain competitive test accuracies. Their training logs are also provided.
 
 To train a fixed CNN architecture on ImageNet from scratch, run
 ```
