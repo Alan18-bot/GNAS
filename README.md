@@ -4,48 +4,32 @@ This is the code for the paper "Game-based Neural Architecture Search"
 
 # Requirements
 
-Python >= 3.7.3
+Python >= 3.6.11
 
-Tensorflow >= 1.14.0
+Pytorch >= 1.6.0
 
-# To search Architecture
+# Architecture Search
 
-To search CNN architectures for CIFAR-10 by GNAS, run
+To search CNN architectures by GNAS and the improved random search, run
 ```
-cd GNAS
-bash scripts/train_search_GNAS.sh
+bash pytorch_GNAS/train_search.sh
 ```
-To use random search and the improved random search, respectively, run
-```
-cd GNAS
-bash scripts/train_search_RS.sh
-```
-and
-```
-cd GNAS
-bash scripts/train_search_GNAS_and_RS_plus.sh
-```
+Additionally, we provide the random seeds in ``` train_search.sh ``` to reproduce the distribution figures in our paper.
 
 
 
-After searching, the architectures returned by GNAS will be in ```Out_models/```, along with their validation accuracies. Your can choose several architectures with relatively high validation accuracies and train them further.
 
-To train a fixed CNN architecture on CIFAR-10 from scratch, run
-```
-cd GNAS
-bash scripts/train_final.sh
-```
-The best found cells are shown in "best_cells.pdf".
-Moreover, we show several well-performing architectures found by our algorithms in ```train_final.sh```. All of them can obtain competitive test accuracies. Their training logs are also provided.
+# Architecture Evaluation
 
-To train a fixed CNN architecture on ImageNet from scratch, run
-```
-cd GNAS
-bash scripts/train_final_imagenet.sh
-```
+After searching, the architectures returned by GNAS are given in ```GNAS_Arcs/```, along with their validation accuracies. We choose the architectures with high validation accuracies and train them further.
 
+To train a found architecture from scratch, run
+```
+bash pytorch_GNAS/train_final.sh
+```
+The default architecture is our best found architecture. The expected result is 2.59% test error.
 
 # Acknowledgements
-We thank Hieu Pham for the discussion on some details of the weight-sharing model in [`ENAS`](https://github.com/melodyguan/enas) implementation. 
+We thank Liu et al. for the discussion on some training details in [`DARTS`](https://github.com/quark0/darts) implementation. 
 We furthermore thank the anonymous reviewers for their constructive comments.
 
